@@ -1,0 +1,24 @@
+void setup()
+{
+  //LEFT MOTOR
+  pinMode(7, OUTPUT);
+  pinMode(8, OUTPUT);
+  pinMode(9, OUTPUT); // connect pwm pin of left motor at pin9
+
+  //right motor
+  pinMode(10, OUTPUT);
+  pinMode(11, OUTPUT);
+  pinMode(12, OUTPUT); motor // connect pwm pin of right motor at pin12
+}
+
+void loop()
+{
+  digitalWrite(7, HIGH);
+  digitalWrite(8, LOW);
+  analogWrite(9, 100);
+  delay(1000);
+  digitalWrite(10, HIGH);
+  digitalWrite(11, LOW);
+  analogWrite(12, 255);
+  delay(1000);
+}

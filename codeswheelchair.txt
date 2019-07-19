@@ -1,0 +1,41 @@
+int EN2 = 14;  
+int EN3 = 15;
+int EN4 = 16;
+int EN5 = 17;
+int EA = 3;
+int EB = 5;
+void left_top(void) {
+  analogWrite(EA, 128); //speed 0 - 255
+  analogWrite(EB, 255); //speed 0 - 255
+  digitalWrite(EN2, LOW);
+  digitalWrite(EN3, HIGH);
+  digitalWrite(EN4, LOW);
+  digitalWrite(EN5, HIGH);
+}
+
+void right_top(void) {
+  analogWrite(EA, 255); //speed 0 - 255
+  analogWrite(EB, 128); //speed 0 - 255
+  digitalWrite(EN2, LOW);
+  digitalWrite(EN3, HIGH);
+  digitalWrite(EN4, LOW);
+  digitalWrite(EN5, HIGH);
+}
+
+void left_down(void) {
+  analogWrite(EA, 128); //speed 0 - 255
+  analogWrite(EB, 255); //speed 0 - 255
+  digitalWrite(EN2, HIGH);
+  digitalWrite(EN3, LOW);
+  digitalWrite(EN4, HIGH);
+  digitalWrite(EN5, LOW);
+}
+
+void right_down(void) {
+  analogWrite(EA, 255); //speed 0 - 255
+  analogWrite(EB, 128); //speed 0 - 255
+  digitalWrite(EN2, HIGH);
+  digitalWrite(EN3, LOW);
+  digitalWrite(EN4, HIGH);
+  digitalWrite(EN5, LOW);
+}
